@@ -1,0 +1,17 @@
+<div class="mat-card-cvr">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>{{title}}</span>
+        <span class="span-padding"></span>
+        <button mat-button [matMenuTriggerFor]="menu">功能</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>退出</button>
+    </mat-menu>
+
+</div>
+
+
