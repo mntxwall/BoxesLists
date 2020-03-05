@@ -6,7 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 
 import {MatCardModule} from '@angular/material/card';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -19,7 +19,8 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
