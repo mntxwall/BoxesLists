@@ -9,7 +9,14 @@ export class ShowViewsComponent implements OnInit {
 
   constructor() { }
 
+  checked = false;
+  indeterminate = false;
+
   ngOnInit(): void {
+  }
+
+  saveSetting(form) {
+    console.log(form.value);
   }
 
 }

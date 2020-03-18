@@ -7,11 +7,14 @@ import {MaterialModule} from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
+import {ShowViewsComponent} from './show-views/show-views.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowViewsComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     BrowserAnimationsModule,
     FormsModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,5 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = '问卷调查';
-  checked = false;
-  indeterminate = false;
+
 }
