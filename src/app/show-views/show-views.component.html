@@ -3,11 +3,16 @@
 
 <mat-card>
   <mat-card-content>
-    <h2 class="example-h2">Checkbox configuration</h2>
+    <h2 class="example-h2">数据使用调查</h2>
 
     <section class="example-section">
-      <mat-checkbox class="example-margin" [(ngModel)]="checked" color="primary" name="checked">Checked</mat-checkbox>
-      <mat-checkbox class="example-margin" [(ngModel)]="indeterminate" color="primary" name="indeterminate">Indeterminate</mat-checkbox>
+      <div class="check-box-option">
+        <mat-checkbox class="example-margin" [(ngModel)]="checked" color="primary" name="checked">关系</mat-checkbox>
+      </div>
+      <div class="check-box-option">
+        <mat-checkbox class="example-margin" [(ngModel)]="indeterminate" color="primary" name="indeterminate">Indeterminate</mat-checkbox>
+      </div>
+
     </section>
 
   </mat-card-content>
