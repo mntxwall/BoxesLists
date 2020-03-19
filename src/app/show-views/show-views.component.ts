@@ -16,7 +16,8 @@ export class ShowViewsComponent implements OnInit {
   }
 
   saveSetting(form) {
-    console.log(form.value);
+    console.log('This is table sbmit');
+    console.log(form);
   }
 
 }
