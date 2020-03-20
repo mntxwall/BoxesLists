@@ -7,10 +7,13 @@
 
     <section class="example-section">
       <div class="check-box-option">
-        <mat-checkbox class="example-margin" [(ngModel)]="checked" color="primary" name="checked">关系</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="checked_1" color="primary" name="checked_1">关系</mat-checkbox>
       </div>
       <div class="check-box-option">
-        <mat-checkbox class="example-margin" [(ngModel)]="indeterminate" color="primary" name="indeterminate">Indeterminate</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="indeterminate_1" color="primary" name="indeterminate_1">轨迹</mat-checkbox>
+      </div>
+      <div class="check-box-option">
+        <mat-checkbox class="example-margin" [(ngModel)]="others" color="primary" name="others">其它</mat-checkbox>
       </div>
 
     </section>
@@ -18,17 +21,18 @@
   </mat-card-content>
 </mat-card>
 
-<mat-card>
-  <mat-card-content>
-    <h2 class="example-h2">Checkbox configuration</h2>
 
-    <section class="example-section">
-      <mat-checkbox class="example-margin"  color="primary" name="check2_1">Checked</mat-checkbox>
-      <mat-checkbox class="example-margin" color="primary" name="check2_2">Indeterminate</mat-checkbox>
-    </section>
-
-  </mat-card-content>
-</mat-card>
+  <mat-card>
+    <label id="example-radio-group-label">如果直接提供上述功能的查询，你会使用吗？</label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="useChoice" name="useChoice">
+      <mat-radio-button class="example-radio-button" *ngFor="let choice of choices;" [value]="choice.value" color="primary">
+        {{choice.viewValue}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
 
 <button mat-flat-button color="primary">Primary</button>
 </form>
