@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BoxServiceService} from '../box-service.service';
 
 interface OptionChoice {
   value: boolean,
@@ -12,15 +13,16 @@ interface OptionChoice {
 })
 export class ShowViewsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private boxService: BoxServiceService) { }
 
-  checked_1 = false;
-  indeterminate_1 = false;
+  relationship = false;
+  trajectory = false;
   others = false;
 
-  useChoice: string = "";
+  useChoice = '';
+  inputValue = '';
   choices: OptionChoice[] = [
-    {value: true, viewValue:'会'},
+    {value: true, viewValue: '会'},
     {value: false, viewValue: '不会'}
     ];
 
@@ -28,8 +30,8 @@ export class ShowViewsComponent implements OnInit {
   }
 
   saveSetting(form) {
-    console.log('This is table sbmit');
     console.log(form);
+    this.boxService.postBoxData(form).subscribe(data => console.log(data));
   }
 
 }

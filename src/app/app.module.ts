@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {ShowViewsComponent} from './show-views/show-views.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -22,7 +24,8 @@ import {ShowViewsComponent} from './show-views/show-views.component';
     BrowserAnimationsModule,
     FormsModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

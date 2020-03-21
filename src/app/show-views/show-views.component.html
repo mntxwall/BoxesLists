@@ -7,14 +7,25 @@
 
     <section class="example-section">
       <div class="check-box-option">
-        <mat-checkbox class="example-margin" [(ngModel)]="checked_1" color="primary" name="checked_1">关系</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="relationship" color="primary" name="relationship">关系</mat-checkbox>
       </div>
       <div class="check-box-option">
-        <mat-checkbox class="example-margin" [(ngModel)]="indeterminate_1" color="primary" name="indeterminate_1">轨迹</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="trajectory" color="primary" name="trajectory">轨迹</mat-checkbox>
       </div>
       <div class="check-box-option">
         <mat-checkbox class="example-margin" [(ngModel)]="others" color="primary" name="others">其它</mat-checkbox>
       </div>
+
+      <div *ngIf="others">
+        <mat-form-field class="example-form-field">
+          <mat-label>请输入</mat-label>
+          <input matInput type="text" [(ngModel)]="inputValue" name="inputValue">
+          <button mat-button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
 
     </section>
 
